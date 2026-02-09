@@ -14,6 +14,10 @@ Note: this problem does not require the "compounding interest" formula from the 
 
 ### Your code here ###
 
-in_state_gift = 0
+in_state_gift = 30792 / 0.05
 
+<<<<<<< Updated upstream
 out_state_gift = 0
+=======
+out_state_gift = 47882 / 0.05
+>>>>>>> Stashed changes
