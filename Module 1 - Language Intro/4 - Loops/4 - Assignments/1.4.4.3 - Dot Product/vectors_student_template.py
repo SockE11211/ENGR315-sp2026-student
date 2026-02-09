@@ -25,7 +25,7 @@ Step 2: Iterate through the vector(s) and calculate the dot product
 """
 
 # store your result here. Do not change the name
-dot_product = 0
+dot_product = vector_a[0] * vector_b[0] + vector_a[1] * vector_b[1] + vector_a[2] * vector_b[2]
 
 ### Your code here
 
