@@ -14,10 +14,10 @@ Step 1: Declare and initialize all the values for the Gauss-Legendre algorithm
 """
 
 # modify these lines to correct set the variable values
-a = None
-b = None
-t = None
-p = None
+a = 1
+b = 1 / (2 ** 0.5)
+t = 1/4
+p = 1
 
 # perform 10 iterations of this loop
 for i in range(1, 10):
@@ -26,7 +26,11 @@ for i in range(1, 10):
     the order of operations and dependencies among calculations is respected. You
     may wish to create new "temporary" variables to hold intermediate results
     """
-
+    y = a
+    a_n = (a + b) / 2
+    b_n = (a * b) ** (1/2)
+    t_n = t - (p * ((y - a_n) ** 2))
+    p_n = 2 * p
     ### YOUR CODE HERE ###
 
     # print out the current loop iteration. This is present to have something in the loop.
@@ -37,7 +41,7 @@ Step 3: After iterating 10 times, calculate the final value for PI
 """
 
 # modify this line below to estimate PI
-pi_estimate = None
+pi_estimate = ((a_n + b_n) ** 2) / (4 * t_n)
 
 print("Final estimate for PI: ", pi_estimate)
 print("Error on estimate: ", abs(pi_estimate - math.pi))
