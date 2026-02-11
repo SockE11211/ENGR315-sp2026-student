@@ -4,7 +4,7 @@
 
 # Below this line is going to be a "print" function
 print("Hello, World!")
-ptint("Hey")
+print("Hey")
 
 # Right Click in this Window, and click "Run Hello_World.py"
 # Then Look down to the bottom to see what happens!
