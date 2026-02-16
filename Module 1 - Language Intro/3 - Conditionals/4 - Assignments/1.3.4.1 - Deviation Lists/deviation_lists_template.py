@@ -37,7 +37,7 @@ else:
 # set this variable equal to the list with the largest standard deviation
 # do not modify this variable's name, you can/should adjust the contents ;)
 # e.g. longest_list_is = myList
-if len(random_list_A) > len(random_list_B):
+if len(random_list_A) >= len(random_list_B):    
     longest_list_is = random_list_A
-elif len(random_list_B) > len(random_list_A):
+else:
     longest_list_is = random_list_B

@@ -23,9 +23,10 @@ vector_b = generate_random_int_list(fixed_length, maximum_value)
 """
 Step 2: Iterate through the vector(s) and calculate the dot product
 """
-
+dot_product = 0
 # store your result here. Do not change the name
-dot_product = vector_a[0] * vector_b[0] + vector_a[1] * vector_b[1] + vector_a[2] * vector_b[2]
+for i in range(0,len(vector_a)):
+    dot_product += vector_a[i] * vector_b[i]
 
 ### Your code here
 

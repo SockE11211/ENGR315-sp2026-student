@@ -27,4 +27,3 @@ if exists(absolute_path):
     print("Can see train_data!")
 else:
     print("Cannot locate train_data at path: ", absolute_path)
-

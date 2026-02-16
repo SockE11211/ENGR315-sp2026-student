@@ -31,6 +31,11 @@ for i in range(1, 10):
     b_n = (a * b) ** (1/2)
     t_n = t - (p * ((y - a_n) ** 2))
     p_n = 2 * p
+
+    a = a_n
+    b = b_n
+    t = t_n
+    p = p_n
     ### YOUR CODE HERE ###
 
     # print out the current loop iteration. This is present to have something in the loop.
