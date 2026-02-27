@@ -27,3 +27,4 @@ two_columns = arr2d[1, :2]
 # from all rows, get the first column
 first_column = arr2d[:, 0]
 
+print(arr2d)

@@ -25,8 +25,8 @@ Step 2: Iterate through the vector(s) and calculate the dot product
 """
 dot_product = 0
 # store your result here. Do not change the name
-for i in range(0,len(vector_a)):
-    dot_product += vector_a[i] * vector_b[i]
+for index in range(0,len(vector_a)):
+    dot_product += vector_a[index] * vector_b[index]
 
 ### Your code here
 
