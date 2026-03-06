@@ -56,7 +56,7 @@ if __name__ == "__main__":
 
     # construct a silly string as headers for printing out a vector in 3-space <x,y,z>
     header_string = "x,y,z\n"
-
+    
     # write header to file
     my_csv.write(header_string)
 
