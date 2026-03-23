@@ -30,11 +30,22 @@ def one_sample_tests(_files: list, _mean: float, _alpha: float, _less_than: bool
     :param _less_than: If true, then a left-sided (<) t-test is performed. Otherwise, a right-sided test (>)
     :return: A list of files where the null hypothesis is rejected
     """
-
+    if _less_than:
+        alternative = 'less'
+    else:
+        alternative = 'greater'
+    
     # list of files that are out of spec
     reject_null_hypothesis = []
 
-    # YOUR CODE HERE #
+    for file in _files:
+        data = np.asarray(file)
+
+        (stat, p_value) = ttest_1samp(data, popmean=_mean, alternative=alternative)
+    
+        if p_value < _alpha:
+            reject_null_hypothesis.append(file)
+        
 
     # return samples that were rejected
     return reject_null_hypothesis

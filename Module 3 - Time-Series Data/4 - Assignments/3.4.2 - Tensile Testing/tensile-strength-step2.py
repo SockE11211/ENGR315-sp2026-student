@@ -2,7 +2,7 @@ import numpy as np
 import os
 import math
 import sys
-
+from math import pi
 
 def parse_tensile_file(path_to_file):
     file = open(path_to_file)
@@ -60,9 +60,16 @@ def calculate_stress(force, sample_diameter):
     :return: An array of stresses experienced by the sample in Kilo Pascals (MPa)
     """
 
-    ### YOUR SOLUTION FROM STEP 1 TEMPLATE HERE ###
+    # calculate the cross-section area (mm^2)
+    cross_section_area = pi * sample_diameter ** 2 / 4###your code here ###
 
-    return None
+    # calculate stress (MPa) from load (kN) and cross-sectional area
+    ### your code here ###
+
+    # delete this line and replace it with your own
+    stress = force / cross_section_area
+
+    return stress
 
 
 def calculate_max_strength_strain(strain, stress):
@@ -76,11 +83,12 @@ def calculate_max_strength_strain(strain, stress):
     """
 
     # calculate the maximum stress experienced
-    ultimate_tensile_stress = -1
+    ultimate_tensile_stress = max(stress)
 
     # calculate the maximum strain experienced
     fracture_strain = -1
-
+    for data in strain:
+        fracture_strain = max(strain)
     return ultimate_tensile_stress, fracture_strain
 
 

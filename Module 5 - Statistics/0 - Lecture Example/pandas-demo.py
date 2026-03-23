@@ -30,7 +30,7 @@ large_capitals = df[df['Population'] > 15000000]
 print(large_capitals)
 
 # for another boolean selection, grab all data where the country is Brazil
-brazil_data = df[df['Country'] == 'Brazil']
+brazil_data = df[df['Capital'] == 'New Delhi']
 
 # print out brazil information
 print(brazil_data)

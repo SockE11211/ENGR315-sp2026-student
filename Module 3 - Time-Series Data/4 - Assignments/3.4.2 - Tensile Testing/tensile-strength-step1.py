@@ -2,7 +2,7 @@ import numpy as np
 import os
 import math
 import sys
-
+from math import pi
 
 def parse_tensile_file(path_to_file):
     file = open(path_to_file)
@@ -61,16 +61,15 @@ def calculate_stress(force, sample_diameter):
     """
 
     # calculate the cross-section area (mm^2)
-    ### your code here ###
+    cross_section_area = pi * sample_diameter ** 2 / 4###your code here ###
 
     # calculate stress (MPa) from load (kN) and cross-sectional area
     ### your code here ###
 
     # delete this line and replace it with your own
-    stress = None
+    stress = force / cross_section_area
 
     return stress
-
 
 
 if __name__ == "__main__":

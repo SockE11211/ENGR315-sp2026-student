@@ -1,7 +1,7 @@
 import pandas as pd
 
 # path to overall file
-path_to_file = "../../data/tensile/tensile_data.csv"
+path_to_file = "./data/tensile/tensile_data.csv"
 
 # load data into dataframe
 df = pd.read_csv(path_to_file)
