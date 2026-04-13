@@ -35,6 +35,16 @@ def one_sided_tests(_files: list, _mean: float, _alpha: float, _less_than: bool)
     reject_null_hypothesis = []
 
     # YOUR CODE HERE #
+    baseline = np.loadtxt('base1.txt')
+    for file in _files:
+        data = np.loadtxt(file)
+        if _less_than:
+            stat, p_value = ttest_ind(data, baseline, alternative='less')  # data < baseline
+        else:
+            stat, p_value = ttest_ind(data, baseline, alternative='greater')  # data > baseline
+
+        if p_value < _alpha:
+            reject_null_hypothesis.append(file)
 
     # return samples that were rejected
     return reject_null_hypothesis
@@ -64,7 +74,7 @@ if __name__ == "__main__":
 
     # write samples to files
     write_to_csv('base1.txt', base_distribution_one)
-    write_to_csv('base2.txt', base_distribution_one)
+    write_to_csv('base2.txt', base_distribution_two)
     write_to_csv('lesser1.txt', less_than_distribution_one)
     write_to_csv('lesser2.txt', less_than_distribution_two)
     write_to_csv('greater1.txt', greater_than_distribution_one)
